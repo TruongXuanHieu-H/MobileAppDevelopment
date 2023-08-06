@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
 
-public class Donation extends AppCompatActivity {
+public class Donation_Slide2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donation);
+        setContentView(R.layout.activity_donation_slide2);
 
         NumberPicker numberPicker = findViewById(R.id.numberPicker);
         numberPicker.setMinValue(1);
