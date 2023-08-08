@@ -13,13 +13,16 @@
         android:theme="@style/Theme.MobileAppDevelopment"
         tools:targetApi="31">
         <activity
-            android:name=".Donation_Slide2"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".ExplicitIntent.GreetingActivity"
             android:exported="true" />
         <activity
             android:name=".EssentialsOfDevelopingAndroid_Slide4"
+            android:exported="false" />
+        <activity
+            android:name=".Donation_Slide2"
+            android:exported="false" />
+        <activity
+            android:name=".ExplicitIntent.ExplicitIntent"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
