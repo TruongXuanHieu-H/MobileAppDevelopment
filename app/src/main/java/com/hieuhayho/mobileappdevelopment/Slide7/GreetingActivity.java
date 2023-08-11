@@ -1,4 +1,4 @@
-package com.hieuhayho.mobileappdevelopment.ExplicitIntent;
+package com.hieuhayho.mobileappdevelopment.Slide7;
 
 import androidx.appcompat.app.AppCompatActivity;
 

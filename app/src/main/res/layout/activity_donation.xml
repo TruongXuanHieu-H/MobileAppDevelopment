@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Donation_Slide2">
+    tools:context=".Slide2.Donation">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

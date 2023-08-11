@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,23 +17,31 @@
         android:theme="@style/Theme.MobileAppDevelopment"
         tools:targetApi="31">
         <activity
-            android:name=".ExplicitIntent.GreetingActivity"
-            android:exported="true" />
-        <activity
-            android:name=".EssentialsOfDevelopingAndroid_Slide4"
-            android:exported="false" />
-        <activity
-            android:name=".Donation_Slide2"
-            android:exported="false" />
-        <activity
-            android:name=".ExplicitIntent.ExplicitIntent"
+            android:name=".Slide7.ImplicitIntent"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Slide7.ExplicitIntent"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Slide7.GreetingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Slide4.EssentialsOfDevelopingAndroid"
+            android:exported="false" />
+        <activity
+            android:name=".Slide2.Donation"
+            android:exported="false" />
+
     </application>
 
 </manifest>
