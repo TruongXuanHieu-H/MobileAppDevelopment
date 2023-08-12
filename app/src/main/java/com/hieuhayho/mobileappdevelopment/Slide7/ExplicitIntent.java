@@ -1,5 +1,9 @@
 package com.hieuhayho.mobileappdevelopment.Slide7;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -47,8 +51,25 @@ public class ExplicitIntent extends AppCompatActivity {
         intent.putExtra("Message", message);
 
         //startActivity(intent);
-        startActivityForResult(intent, MY_REQUEST_CODE);
+        //startActivityForResult(intent, MY_REQUEST_CODE);
+        startActivityIntent.launch(intent);
     }
+
+    ActivityResultLauncher<Intent> startActivityIntent = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    // Add same code that you want to add in onActivityResult method
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        String feedback = result.getData().getStringExtra("Feedback");
+                        feedbackOutput.setText(feedback);
+                    } else {
+                        feedbackOutput.setText("????");
+                    }
+                }
+            });
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
