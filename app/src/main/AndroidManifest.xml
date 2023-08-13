@@ -5,7 +5,9 @@
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,17 +19,32 @@
         android:theme="@style/Theme.MobileAppDevelopment"
         tools:targetApi="31">
         <activity
-            android:name=".Slide7.ImplicitIntent"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".Slide7.ExplicitIntent"
+            android:name=".Slide5.TabSelector"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Slide5.Clock"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Slide5.DateAndTime"
+            android:exported="true" />
+        <activity
+            android:name=".Slide7.ImplicitIntent"
+            android:exported="true" />
+        <activity
+            android:name=".Slide7.ExplicitIntent"
+            android:exported="true" />
         <activity
             android:name=".Slide7.GreetingActivity"
             android:exported="true" />
@@ -37,7 +54,6 @@
         <activity
             android:name=".Slide2.Donation"
             android:exported="false" />
-
     </application>
 
 </manifest>
